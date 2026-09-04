@@ -24,9 +24,7 @@ modules:
       packages:
         - steam
         - steam-devices
-        - game-devices-udev
         - powertop
-        - gamemode
         - mangohud
 
   - type: default-flatpaks
