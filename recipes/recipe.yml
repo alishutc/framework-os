@@ -57,6 +57,10 @@ modules:
       - Blur my Shell
       - Spotlight
 
+  - type: script
+    snippets:
+      - sed -i "s|// this._addItem(new MenuItem(_('System Settings...')|this._addItem(new MenuItem(_('System Settings...')|" /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js
+
   - type: gschema-overrides
     include:
       - zz-framework.gschema.override
