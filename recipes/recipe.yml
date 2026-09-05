@@ -29,6 +29,9 @@ modules:
         - steam-devices
         - powertop
         - mangohud
+        - ffmpegthumbnailer
+        - libva-utils
+        - jetbrains-mono-fonts-all
 
   - type: default-flatpaks
     configurations:

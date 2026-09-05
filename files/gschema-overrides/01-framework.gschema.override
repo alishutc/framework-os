@@ -8,6 +8,7 @@ experimental-features=['scale-monitor-framebuffer']
 [org.gnome.desktop.interface]
 enable-hot-corners=false
 clock-show-weekday=true
+monospace-font-name="JetBrains Mono 11"
 
 [org.gnome.desktop.wm.preferences]
 button-layout=":minimize,maximize,close"
