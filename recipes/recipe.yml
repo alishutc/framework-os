@@ -35,12 +35,17 @@ modules:
         - libva-utils
         - jetbrains-mono-fonts-all
         - helium-bin
+    remove:
+      packages:
+        - gnome-software
+        - gnome-software-rpm-ostree
 
   - type: default-flatpaks
     configurations:
-      - scope: user # Enable Flathub user repository and pre-install Chrome
+      - scope: user # Enable Flathub user repository and pre-install Chrome and Bazaar
         install:
           - com.google.Chrome
+          - io.github.kolunmi.Bazaar
 
   - type: gnome-extensions
     install:

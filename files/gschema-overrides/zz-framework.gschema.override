@@ -1,6 +1,6 @@
 [org.gnome.shell]
 enabled-extensions=['logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'blur-my-shell@aunetx', 'spotlight@nin']
-favorite-apps=['com.google.Chrome.desktop', 'helium.desktop', 'org.gnome.Nautilus.desktop', 'steam.desktop', 'org.gnome.Software.desktop']
+favorite-apps=['com.google.Chrome.desktop', 'helium.desktop', 'org.gnome.Nautilus.desktop', 'steam.desktop', 'io.github.kolunmi.Bazaar.desktop']
 
 [org.gnome.mutter]
 center-new-windows=true
@@ -31,6 +31,7 @@ sort-directories-first=true
 [org.gnome.shell.extensions.logo-menu]
 use-custom-icon=true
 custom-icon-path='/usr/share/icons/framework-logo.svg'
+menu-button-software-center='flatpak run io.github.kolunmi.Bazaar'
 
 [org.gnome.shell.extensions.spotlight]
 toggle-shortcut=['<Control>space']
