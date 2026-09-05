@@ -5,3 +5,4 @@ cosign.private
 *.iso-CHECKSUM
 PROJECT.md
 /.bluebuild-scripts_*
+/vm/
