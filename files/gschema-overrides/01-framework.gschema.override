@@ -34,3 +34,11 @@ custom-icon-path='/usr/share/icons/framework-logo.svg'
 
 [org.gnome.shell.extensions.spotlight]
 toggle-shortcut=['<Control>space']
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/framework/framework-13-light.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/framework/framework-13-dark.jpg'
+
+[org.gnome.desktop.screensaver]
+picture-uri='file:///usr/share/backgrounds/framework/framework-13-dark.jpg'
+
