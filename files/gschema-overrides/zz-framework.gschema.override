@@ -32,6 +32,7 @@ sort-directories-first=true
 use-custom-icon=true
 custom-icon-path='/usr/share/icons/framework-logo.svg'
 menu-button-software-center='flatpak run io.github.kolunmi.Bazaar'
+menu-button-terminal='ptyxis'
 
 [org.gnome.shell.extensions.spotlight]
 toggle-shortcut=['<Control>space']
