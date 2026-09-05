@@ -42,10 +42,12 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - scope: user # Enable Flathub user repository and pre-install Chrome and Bazaar
+      - scope: system # Enable system Flathub remote and install Bazaar system-wide
+        install:
+          - io.github.kolunmi.Bazaar
+      - scope: user # Enable user Flathub remote and install Chrome for the user
         install:
           - com.google.Chrome
-          - io.github.kolunmi.Bazaar
 
   - type: gnome-extensions
     install:
