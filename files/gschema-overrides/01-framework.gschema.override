@@ -2,7 +2,29 @@
 enabled-extensions=['logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'blur-my-shell@aunetx', 'search-light@icedman.github.com']
 
 [org.gnome.mutter]
+center-new-windows=true
 experimental-features=['scale-monitor-framebuffer']
+
+[org.gnome.desktop.interface]
+enable-hot-corners=false
+clock-show-weekday=true
+
+[org.gnome.desktop.wm.preferences]
+button-layout=":minimize,maximize,close"
+
+[org.gnome.desktop.wm.keybindings]
+show-desktop=['<Super>d']
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
+
+[org.gnome.settings-daemon.plugins.media-keys]
+home=['<Super>e']
+
+[org.gtk.Settings.FileChooser]
+sort-directories-first=true
+
+[org.gtk.gtk4.Settings.FileChooser]
+sort-directories-first=true
 
 [org.gnome.shell.extensions.logo-menu]
 use-custom-icon=true
