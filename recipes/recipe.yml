@@ -48,7 +48,7 @@ modules:
       - AppIndicator and KStatusNotifierItem Support
       - Dash to Dock
       - Blur my Shell
-      - Search Light
+      - Spotlight
 
   - type: gschema-overrides
     include:
