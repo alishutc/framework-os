@@ -1,5 +1,5 @@
 [org.gnome.shell]
-enabled-extensions=['logo-menu@Aryan20', 'appindicatorsupport@rgcjonas.gmail.com']
+enabled-extensions=['logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'blur-my-shell@aunetx', 'search-light@icedman.github.com']
 
 [org.gnome.mutter]
 experimental-features=['scale-monitor-framebuffer']
@@ -7,3 +7,6 @@ experimental-features=['scale-monitor-framebuffer']
 [org.gnome.shell.extensions.logo-menu]
 use-custom-icon=true
 custom-icon-path='/usr/share/icons/framework-logo.svg'
+
+[org.gnome.shell.extensions.search-light]
+shortcut-search=['<Super>space']

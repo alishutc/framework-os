@@ -38,6 +38,9 @@ modules:
     install:
       - Logo Menu
       - AppIndicator and KStatusNotifierItem Support
+      - Dash to Dock
+      - Blur my Shell
+      - Search Light
 
   - type: gschema-overrides
     include:
