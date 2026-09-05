@@ -23,6 +23,8 @@ modules:
   - type: dnf
     repos:
       nonfree: rpmfusion
+      copr:
+        - imput/helium
     install:
       packages:
         - steam
@@ -32,10 +34,13 @@ modules:
         - ffmpegthumbnailer
         - libva-utils
         - jetbrains-mono-fonts-all
+        - helium-bin
 
   - type: default-flatpaks
     configurations:
-      - scope: user # Enable Flathub user repository for on-demand apps
+      - scope: user # Enable Flathub user repository and pre-install Chrome
+        install:
+          - com.google.Chrome
 
   - type: gnome-extensions
     install:
