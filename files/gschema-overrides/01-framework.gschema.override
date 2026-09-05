@@ -1,0 +1,9 @@
+[org.gnome.shell]
+enabled-extensions=['logo-menu@Aryan20', 'appindicatorsupport@rgcjonas.gmail.com']
+
+[org.gnome.mutter]
+experimental-features=['scale-monitor-framebuffer']
+
+[org.gnome.shell.extensions.logo-menu]
+use-custom-icon=true
+custom-icon-path='/usr/share/icons/framework-logo.svg'
