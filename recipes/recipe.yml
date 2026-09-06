@@ -39,6 +39,8 @@ modules:
       packages:
         - gnome-software
         - gnome-software-rpm-ostree
+        - firefox
+        - firefox-langpacks
 
   - type: default-flatpaks
     configurations:
