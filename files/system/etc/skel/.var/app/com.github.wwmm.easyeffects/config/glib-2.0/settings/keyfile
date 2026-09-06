@@ -1,0 +1,9 @@
+[com/github/wwmm/easyeffects]
+last-loaded-output-preset='framework-13'
+bypass=false
+
+[com/github/wwmm/easyeffects/streamoutputs]
+plugins=['equalizer#0']
+
+[com/github/wwmm/easyeffects/libportal]
+enable-autostart=true

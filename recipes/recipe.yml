@@ -42,9 +42,10 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - scope: system # Enable system Flathub remote and install Bazaar system-wide
+      - scope: system # Enable system Flathub remote and install Bazaar and EasyEffects system-wide
         install:
           - io.github.kolunmi.Bazaar
+          - com.github.wwmm.easyeffects
       - scope: user # Enable user Flathub remote and install Chrome for the user
         install:
           - com.google.Chrome

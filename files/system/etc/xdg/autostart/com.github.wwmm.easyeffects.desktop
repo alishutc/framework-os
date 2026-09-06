@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=EasyEffects
+Comment=Audio Effects for PipeWire Applications
+Exec=flatpak run --command=easyeffects com.github.wwmm.easyeffects --gapplication-service
+Icon=com.github.wwmm.easyeffects
+StartupNotify=false
+Terminal=false
