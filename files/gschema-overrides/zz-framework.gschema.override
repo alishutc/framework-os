@@ -30,7 +30,7 @@ sort-directories-first=true
 
 [org.gnome.shell.extensions.logo-menu]
 use-custom-icon=true
-custom-icon-path='/usr/share/icons/framework-logo.svg'
+custom-icon-path='/usr/share/icons/framework-logo-symbolic.svg'
 menu-button-software-center='flatpak run io.github.kolunmi.Bazaar'
 menu-button-terminal='ptyxis'
 
