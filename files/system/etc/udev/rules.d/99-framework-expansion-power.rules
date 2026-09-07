@@ -1,0 +1,3 @@
+# Enable autosuspend for Framework HDMI and DisplayPort expansion cards to save power when no display is connected
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="32ac", ATTR{idProduct}=="0002", TEST=="power/control", ATTR{power/control}="auto"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="32ac", ATTR{idProduct}=="0003", TEST=="power/control", ATTR{power/control}="auto"
