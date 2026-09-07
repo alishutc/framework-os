@@ -25,6 +25,7 @@ modules:
       nonfree: rpmfusion
       copr:
         - imput/helium
+        - atim/starship
     install:
       packages:
         - steam
@@ -37,6 +38,9 @@ modules:
         - helium-bin
         - gcc
         - mesa-va-drivers-freeworld
+        - ripgrep
+        - fzf
+        - starship
     remove:
       packages:
         - gnome-software
