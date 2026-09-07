@@ -35,6 +35,7 @@ modules:
         - libva-utils
         - jetbrains-mono-fonts-all
         - helium-bin
+        - gcc
     remove:
       packages:
         - gnome-software
@@ -51,6 +52,10 @@ modules:
       - scope: user # Enable user Flathub remote and install Chrome for the user
         install:
           - com.google.Chrome
+
+  - type: brew
+    nofile-limits: true
+    brew-analytics: false
 
   - type: gnome-extensions
     install:
