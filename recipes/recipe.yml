@@ -43,6 +43,7 @@ modules:
         - starship
         - podman-docker
         - podman-compose
+        - just
     remove:
       packages:
         - gnome-software
@@ -72,9 +73,12 @@ modules:
       - Blur my Shell
       - Spotlight
 
+  - type: justfiles
+
   - type: script
     snippets:
       - sed -i "s|// this._addItem(new MenuItem(_('System Settings...')|this._addItem(new MenuItem(_('System Settings...')|" /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js
+      - ln -sf /usr/bin/blujust /usr/bin/ujust
 
   - type: systemd
     user:
