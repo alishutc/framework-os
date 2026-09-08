@@ -41,6 +41,8 @@ modules:
         - ripgrep
         - fzf
         - starship
+        - podman-docker
+        - podman-compose
     remove:
       packages:
         - gnome-software
@@ -73,6 +75,11 @@ modules:
   - type: script
     snippets:
       - sed -i "s|// this._addItem(new MenuItem(_('System Settings...')|this._addItem(new MenuItem(_('System Settings...')|" /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js
+
+  - type: systemd
+    user:
+      enabled:
+        - podman.socket
 
   - type: gschema-overrides
     include:
