@@ -26,6 +26,11 @@ modules:
       copr:
         - imput/helium
         - atim/starship
+      files:
+        - vscode.repo
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      cleanup: true
     install:
       packages:
         - steam
@@ -44,6 +49,7 @@ modules:
         - podman-docker
         - podman-compose
         - just
+        - code
     remove:
       packages:
         - gnome-software

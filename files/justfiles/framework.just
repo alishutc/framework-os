@@ -83,3 +83,16 @@ dev-status:
 logs:
     #!/usr/bin/bash
     journalctl -b -p 3 --no-pager
+
+# Install Dev Containers extension for VS Code
+vscode-devcontainers:
+    #!/usr/bin/bash
+    set -euo pipefail
+    if command -v code >/dev/null 2>&1; then
+        echo ":: Installing VS Code Dev Containers extension..."
+        code --install-extension ms-vscode-remote.remote-containers --force
+        echo ":: Extension installed!"
+    else
+        echo "Error: VS Code ('code') is not installed."
+        exit 1
+    fi
