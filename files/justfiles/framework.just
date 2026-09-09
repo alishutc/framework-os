@@ -96,3 +96,14 @@ vscode-devcontainers:
         echo "Error: VS Code ('code') is not installed."
         exit 1
     fi
+
+# Connect to Tailscale and grant local user operator control
+tailscale-up:
+    #!/usr/bin/bash
+    echo ":: Authenticating and connecting Tailscale..."
+    sudo tailscale up --operator=$USER
+
+# View Tailscale network status and peers
+tailscale-status:
+    #!/usr/bin/bash
+    tailscale status

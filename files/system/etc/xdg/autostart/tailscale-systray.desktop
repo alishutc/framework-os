@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tailscale
+Comment=Tailscale Client Status
+Exec=tailscale systray
+Terminal=false
+Type=Application
+Icon=tailscale
+X-GNOME-Autostart-enabled=true
+Categories=Network;

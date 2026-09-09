@@ -28,8 +28,10 @@ modules:
         - atim/starship
       files:
         - vscode.repo
+        - tailscale.repo
       keys:
         - https://packages.microsoft.com/keys/microsoft.asc
+        - https://pkgs.tailscale.com/stable/fedora/repo.gpg
       cleanup: true
     install:
       packages:
@@ -50,6 +52,7 @@ modules:
         - podman-compose
         - just
         - code
+        - tailscale
     remove:
       packages:
         - gnome-software
@@ -87,6 +90,9 @@ modules:
       - ln -sf /usr/bin/blujust /usr/bin/ujust
 
   - type: systemd
+    system:
+      enabled:
+        - tailscaled.service
     user:
       enabled:
         - podman.socket
