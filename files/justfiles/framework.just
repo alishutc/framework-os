@@ -141,3 +141,35 @@ virt-setup:
     sudo virsh net-autostart default || true
     sudo virsh net-start default || true
     echo ":: Virtualization setup complete!"
+
+# Check Waydroid container status and session
+waydroid-status:
+    #!/usr/bin/bash
+    set -euo pipefail
+    echo "=== Waydroid Container Service ==="
+    systemctl status waydroid-container.service --no-pager || true
+    echo "=== Waydroid Status ==="
+    waydroid status || true
+
+# Initialize Waydroid with Google Play Apps (GAPPS) or vanilla LineageOS
+waydroid-init TYPE="GAPPS":
+    #!/usr/bin/bash
+    set -euo pipefail
+    echo ":: Initializing Waydroid (type: {{ TYPE }})..."
+    sudo waydroid init -s {{ TYPE }}
+    echo ":: Waydroid initialized! Run 'just waydroid-show' or launch an Android app from the application menu."
+
+# Launch the full Waydroid Android user interface window
+waydroid-show:
+    #!/usr/bin/bash
+    waydroid show-full-ui &
+
+# Stop Waydroid session and container
+waydroid-stop:
+    #!/usr/bin/bash
+    echo ":: Stopping Waydroid session..."
+    waydroid session stop || true
+    echo ":: Stopping Waydroid container..."
+    sudo systemctl stop waydroid-container.service || true
+    echo ":: Waydroid stopped."
+

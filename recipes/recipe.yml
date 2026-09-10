@@ -63,6 +63,8 @@ modules:
         - edk2-ovmf
         - swtpm
         - swtpm-tools
+        - waydroid
+        - waydroid-selinux
     remove:
       packages:
         - gnome-software
@@ -106,6 +108,7 @@ modules:
         - virtqemud.socket
         - virtnetworkd.socket
         - libvirt-workaround.service
+        - waydroid-container.service
     user:
       enabled:
         - podman.socket
