@@ -107,3 +107,37 @@ tailscale-up:
 tailscale-status:
     #!/usr/bin/bash
     tailscale status
+
+# Check status of KVM hardware acceleration, libvirt sockets, and virtual machines
+virt-status:
+    #!/usr/bin/bash
+    set -euo pipefail
+    echo "=== KVM Hardware Acceleration ==="
+    if [ -e /dev/kvm ]; then
+        echo "✓ /dev/kvm is available and accessible"
+    else
+        echo "✗ /dev/kvm is missing (check UEFI virtualization settings: AMD SVM)"
+    fi
+    echo "=== Libvirt Socket Status ==="
+    systemctl status virtqemud.socket virtnetworkd.socket --no-pager || true
+    echo "=== User Group Membership ==="
+    groups | grep -E "\b(libvirt|kvm)\b" || echo "User $USER is not in 'libvirt' group (run 'just virt-setup' to join)"
+    echo "=== Virtual Machines ==="
+    virsh list --all || true
+
+# Add current user to libvirt group and ensure default virtual network is active
+virt-setup:
+    #!/usr/bin/bash
+    set -euo pipefail
+    echo ":: Adding user $USER to 'libvirt' group..."
+    if ! grep -q "^libvirt:" /etc/group 2>/dev/null; then
+        if grep -q "^libvirt:" /usr/lib/group; then
+            grep "^libvirt:" /usr/lib/group | sudo tee -a /etc/group > /dev/null
+        fi
+    fi
+    sudo usermod -aG libvirt "$USER"
+    echo ":: User $USER added to 'libvirt' group (log out and back in for group to take effect)."
+    echo ":: Ensuring default libvirt network is started..."
+    sudo virsh net-autostart default || true
+    sudo virsh net-start default || true
+    echo ":: Virtualization setup complete!"

@@ -53,6 +53,15 @@ modules:
         - just
         - code
         - tailscale
+        - virt-manager
+        - virt-install
+        - libvirt-daemon-kvm
+        - libvirt-client
+        - libvirt-daemon-config-network
+        - qemu-kvm
+        - edk2-ovmf
+        - swtpm
+        - swtpm-tools
     remove:
       packages:
         - gnome-software
@@ -93,6 +102,9 @@ modules:
     system:
       enabled:
         - tailscaled.service
+        - virtqemud.socket
+        - virtnetworkd.socket
+        - libvirt-workaround.service
     user:
       enabled:
         - podman.socket

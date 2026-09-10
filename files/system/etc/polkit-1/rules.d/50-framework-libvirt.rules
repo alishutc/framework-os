@@ -1,0 +1,9 @@
+// Allow users in the 'wheel' or 'libvirt' group to manage libvirt VMs
+// without requiring administrative password prompts.
+
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.libvirt.unix.manage" &&
+        (subject.isInGroup("wheel") || subject.isInGroup("libvirt"))) {
+        return polkit.Result.YES;
+    }
+});
