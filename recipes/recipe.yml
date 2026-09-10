@@ -48,6 +48,7 @@ modules:
         - ripgrep
         - fzf
         - starship
+        - fastfetch
         - podman-docker
         - podman-compose
         - just
