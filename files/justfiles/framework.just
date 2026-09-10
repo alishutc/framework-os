@@ -173,3 +173,9 @@ waydroid-stop:
     sudo systemctl stop waydroid-container.service || true
     echo ":: Waydroid stopped."
 
+# List connected storage devices, filesystems, and mountpoints
+drives:
+    #!/usr/bin/bash
+    lsblk -o NAME,SIZE,TYPE,FSTYPE,LABEL,MOUNTPOINTS
+
+

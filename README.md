@@ -14,6 +14,7 @@ A custom, declarative, and atomic Fedora Silverblue operating system image tailo
   - `powertop` pre-installed for battery auditing.
 - **Speaker DSP Calibration:** Pre-configured EasyEffects service with a custom 4-band resonance EQ preset for Framework 13 speakers.
 - **Hardware Integration:** Goodix fingerprint reader stack (`fprintd`, `fprintd-pam`, `libfprint`) and AMD RDNA hardware video acceleration (`mesa-va-drivers-freeworld`).
+- **Secondary Storage Automounting:** Automated systemd-mount udev rules and udisks2 mount configurations for Framework Storage Expansion Cards (250GB/1TB USB-C), external SSDs, and SD cards (Btrfs, Ext4, exFAT, NTFS) with execution permissions enabled for Steam game libraries.
 
 ### 🎨 Desktop & User Experience
 - **Framework Branding:** Official Framework gear monochrome logo pinned to the top panel via the Logo Menu extension.
@@ -64,6 +65,7 @@ Framework OS includes BlueBuild's `justfiles` module (`blujust`), aliased to `uj
 | `just waydroid-init` | Initializes Waydroid with Google Play Services (`GAPPS`) or vanilla |
 | `just waydroid-show` | Launches the full Android UI window |
 | `just waydroid-stop` | Stops Waydroid session and container |
+| `just drives` | Lists connected storage devices, filesystems, and mountpoints |
 
 ---
 
