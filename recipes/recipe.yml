@@ -53,6 +53,7 @@ modules:
         - podman-compose
         - distrobox
         - gnome-tweaks
+        - tmux
         - just
         - code
         - tailscale
