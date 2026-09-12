@@ -35,7 +35,7 @@ A custom, declarative, and atomic Fedora Silverblue operating system image tailo
 ### 🛠️ Developer Tooling & Virtualization
 - **Terminal Utilities:** Modern CLI stack (`starship` prompt, `fastfetch` with `neofetch` alias, `ripgrep`, `fzf`) pre-integrated for Bash and Fish.
 - **Homebrew:** Linuxbrew pre-staged via BlueBuild's `brew` module.
-- **Rootless Docker / Dev Containers:** Native `podman-docker` CLI, `podman-compose`, `podman.socket`, and `DOCKER_HOST` pre-configured for out-of-the-box VS Code Dev Containers.
+- **Rootless Containers & Distrobox:** Native `podman-docker` CLI, `podman-compose`, `distrobox`, `podman.socket`, and `DOCKER_HOST` pre-configured for out-of-the-box VS Code Dev Containers and custom distro environments.
 - **Visual Studio Code:** Native RPM from Microsoft's repository with Wayland fractional scaling flags enabled.
 - **Local Virtualization (KVM/QEMU):** Full hypervisor stack (`virt-manager`, `virt-install`, `libvirt-daemon-kvm`, `libvirt-client`, `edk2-ovmf`, `swtpm`) with modular socket activation and passwordless Polkit rules for `wheel` and `libvirt` users.
 - **Android Subsystem (Waydroid):** Built-in Waydroid container runtime with SELinux policy and automated firewall integration.

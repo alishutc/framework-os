@@ -51,6 +51,7 @@ modules:
         - fastfetch
         - podman-docker
         - podman-compose
+        - distrobox
         - just
         - code
         - tailscale
