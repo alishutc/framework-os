@@ -52,6 +52,7 @@ modules:
         - podman-docker
         - podman-compose
         - distrobox
+        - gnome-tweaks
         - just
         - code
         - tailscale
