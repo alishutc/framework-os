@@ -87,7 +87,7 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/alishutc/framework-os:lat
 systemctl reboot
 ```
 
-The `latest` tag automatically tracks the Fedora 44 release stream.
+The `latest` tag automatically tracks the Fedora 45 release stream.
 
 ---
 
