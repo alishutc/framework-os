@@ -4,7 +4,6 @@ favorite-apps=['com.google.Chrome.desktop', 'helium.desktop', 'org.gnome.Nautilu
 
 [org.gnome.mutter]
 center-new-windows=true
-experimental-features=['scale-monitor-framebuffer']
 
 [org.gnome.desktop.interface]
 enable-hot-corners=false

@@ -7,7 +7,7 @@ A custom, declarative, and atomic Fedora Silverblue operating system image tailo
 ## 🚀 Highlights & Features
 
 ### 💻 Framework 13 Hardware Optimizations
-- **Display & Scaling:** Experimental Mutter framebuffer scaling enabled out of the box for crisp 125% and 150% fractional scaling on the 2256x1504 3:2 display.
+- **Display & Scaling:** Native Mutter framebuffer fractional scaling (125% and 150%) out of the box on the 2256x1504 3:2 display.
 - **Power Tuning:**
   - Idle autosuspend for HDMI (`32ac:0002`) and DisplayPort (`32ac:0003`) expansion cards via `/etc/udev/rules.d/99-framework-expansion-power.rules`.
   - Headphone audio popping prevention via `snd_hda_intel` power-save disabling and WirePlumber configuration.
